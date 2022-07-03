@@ -8,7 +8,6 @@ env:
   ECR_REPOSITORY: sca_project
   CLUSTER_NAME: actions-demo
   REGION: us-east-1
-  DEPLOYMENT_NAME: sca_project
   ECR_REGISTRY: public.ecr.aws/g8t1g9i0/sca_project
   IMAGE_TAG: latest
 
