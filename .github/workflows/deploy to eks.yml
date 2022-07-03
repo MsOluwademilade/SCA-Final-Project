@@ -5,11 +5,11 @@ on:
     branches: 
       - main
 env:
-  ECR_REPOSITORY: spring-petclinic
+  ECR_REPOSITORY: sca_project
   CLUSTER_NAME: actions-demo
-  REGION: us-west-2
-  DEPLOYMENT_NAME: spring-petclinic
-  ECR_REGISTRY: ${{ secrets.ACCOUNT_ID }}.dkr.ecr.us-west-2.amazonaws.com
+  REGION: us-east-1
+  DEPLOYMENT_NAME: sca_project
+  ECR_REGISTRY: public.ecr.aws/g8t1g9i0/sca_project
   IMAGE_TAG: latest
 
 
