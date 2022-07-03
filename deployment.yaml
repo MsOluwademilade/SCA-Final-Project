@@ -1,0 +1,38 @@
+# ... Deployment YAML 
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: spring-petclinic
+  labels:
+    app: java
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: java
+  template:
+    metadata:
+      labels:
+        app: java
+    spec:
+      containers:
+        - name: spring-petclinic
+          image: image-name
+          ports:
+            - containerPort: 8080
+          imagePullPolicy: Always
+
+---
+# Service YAML
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: spring-petclinic-svc
+spec:
+  selector:
+    app: java
+  ports:
+    - port: 80
+      targetPort: 8080
+  type: LoadBalancer
