@@ -44,8 +44,8 @@ jobs:
         ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }} 
 
       run: |
-        docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
-        docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
+        docker build -t g8t1g9i0/sca_project:latest .
+        docker push $g8t1g9i0/sca_project:latestG
     # Set up kustomize
     - name: Set up Kustomize
       run: |-
