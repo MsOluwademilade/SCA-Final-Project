@@ -6,7 +6,7 @@ on:
       - main
 env:
   ECR_REPOSITORY: sca_project
-  CLUSTER_NAME: SCA-project
+  CLUSTER_NAME: SCA-Project
   REGION: us-east-1
   ECR_REGISTRY: g8t1g9i0
   IMAGE_TAG: latest
