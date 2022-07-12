@@ -57,9 +57,8 @@ jobs:
       run: aws eks update-kubeconfig --name $CLUSTER_NAME --region $REGION  
 
     - name: 'Deploy'
-      run: |-
-        
-        npx ./kustomize-edit-set-image imagename=$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG 
+      run: |
+        ./kustomize edit set image $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG 
         ./kustomize build . | kubectl apply -f -
         kubectl rollout status deployment/$DEPLOYMENT_NAME
         kubectl get services 
