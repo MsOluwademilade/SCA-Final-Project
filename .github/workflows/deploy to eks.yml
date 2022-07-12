@@ -10,7 +10,7 @@ env:
   REGION: us-east-1
   ECR_REGISTRY: public.ecr.aws/g8t1g9i0
   IMAGE_TAG: latest
-  REGISTRY_HTTP_RELATIVEURLS=true
+  REGISTRY_HTTP_RELATIVEURLS: true
 
 
 jobs:
