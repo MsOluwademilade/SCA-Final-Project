@@ -61,5 +61,5 @@ jobs:
       run: |
         ./kustomize edit set image $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
         ./kustomize build . | kubectl apply -f -
-        kubectl rollout status deployment/spring-petclinic
+
         kubectl get services 
