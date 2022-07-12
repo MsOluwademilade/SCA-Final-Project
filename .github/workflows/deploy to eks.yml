@@ -61,5 +61,5 @@ jobs:
         
         ./kustomize edit set image $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG 
         ./kustomize build . | kubectl apply -f -
-        kubectl rollout restart deployment/$DEPLOYMENT_NAME
+        kubectl rollout status deployment/$DEPLOYMENT_NAME
         kubectl get services 
