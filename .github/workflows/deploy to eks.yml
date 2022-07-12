@@ -8,6 +8,7 @@ env:
   ECR_REPOSITORY: g8t1g9i0/sca_project
   CLUSTER_NAME: SCA-Project
   REGION: us-east-1
+  DEPLOYMENT_NAME: spring-petclinic
   ECR_REGISTRY: public.ecr.aws
   IMAGE_TAG: latest
 
@@ -60,5 +61,5 @@ jobs:
       run: |
         ./kustomize edit set image $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
         ./kustomize build . | kubectl apply -f -
-        kubectl rollout status deployment $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
+        kubectl rollout status deployment/$DEPLOYMENT_NAME
         kubectl get services 
