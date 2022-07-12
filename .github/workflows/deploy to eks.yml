@@ -58,7 +58,7 @@ jobs:
 
     - name: 'Deploy'
       run: |
-        ./kustomize edit set image '$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG@sha256:b2b3ba6205e339d1b7a9971984e59ced5b9bddc5ec2f9ae54b571b44e2d052bf'
+        ./kustomize edit set image '$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG'
         ./kustomize build . | kubectl apply -f -
         kubectl rollout status deployment/$DEPLOYMENT_NAME
         kubectl get services 
