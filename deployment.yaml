@@ -16,8 +16,8 @@ spec:
         app: java
     spec:
       containers:
-        - name: spring-petclinic
-          image: imagename
+        - name: 
+          image: $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG 
           ports:
             - containerPort: 8080
           imagePullPolicy: Always
