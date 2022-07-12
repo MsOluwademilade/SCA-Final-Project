@@ -8,7 +8,7 @@ env:
   ECR_REPOSITORY: g8t1g9i0/sca_project
   CLUSTER_NAME: SCA-Project
   REGION: us-east-1
-  ECR_REGISTRY: public.ecr.aws/g8t1g9i0
+  ECR_REGISTRY: public.ecr.aws
   IMAGE_TAG: latest
 
 
