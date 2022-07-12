@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: spring-petclinic
-          image: public.ecr.aws/g8t1g9i0/sca_project:latest
+          image: image-name
           ports:
             - containerPort: 8080
           imagePullPolicy: Always
