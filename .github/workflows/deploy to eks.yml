@@ -29,7 +29,7 @@ jobs:
       id: install
 
     - name: Configure AWS credentials
-      uses: aws-actions/configure-aws-credentials@a8e994175c8ca2d2f1a51c6276df0508aedb19b769003ca4eb766c7a372b1ced
+      uses: aws-actions/configure-aws-credentials@v1
       with:
         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
